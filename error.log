@@ -1,0 +1,2 @@
+[Thu Mar 10 14:34:59.135358 2022] [ssl:warn] [pid 239339] AH01909: chat.club.test:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Mar 10 14:34:59.153761 2022] [ssl:warn] [pid 239340] AH01909: chat.club.test:443:0 server certificate does NOT include an ID which matches the server name
