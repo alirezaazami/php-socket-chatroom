@@ -40,6 +40,11 @@
     <script type="text/javascript" src="assets/js/jquery.datetimepicker.full.min.js"></script>
     <script type="text/javascript" src="assets/font-awesome/js/all.min.js"></script>
   <script type="text/javascript" src="assets/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
-
-
+  <script type="text/javascript" src="assets/js/functions.js"></script>
+<script>
+    let local_variable={
+        unique_token:'<?php echo session_id() ?>',
+        websocket_url:'localhost:8081',
+    }
+</script>
 

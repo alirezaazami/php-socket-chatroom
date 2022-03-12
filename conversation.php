@@ -16,7 +16,6 @@ if(isset($_GET['uid'])){
 }else{
 	$thread = $conn->query("SELECT * from thread where md5(id) = '".$_GET['convo_id']."' ")->fetch_array();
 	$user = $conn->query("SELECT * FROM users where id in ({$thread['user_ids']}) and id !=".$_SESSION['login_id'])->fetch_array();
-
 }
 ?>
 		<div class="w-100" id="cheader">
@@ -215,7 +214,7 @@ if(isset($_GET['uid'])){
 				if(resp.status == 1){
 					$('.convo .status[data-id="'+count+'"]').html('Sent');
                     if (websocket.readyState !== websocket.OPEN) {
-                        websocket = new WebSocket("ws://localhost:8081");
+                        websocket = start_socket();
                         console.log('reconnect')
                         setTimeout(function (){
                             websocket.send(JSON.stringify({type:'chat_sent',data:data,convo_id:resp.convo_id,by:'<?php echo $_SESSION['login_id'] ?>',user_ids:resp.convo_users}))

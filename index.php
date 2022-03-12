@@ -18,9 +18,9 @@
 
 </head>
 <script>
-  
 
-    var websocket = new WebSocket("ws://localhost:8081");
+
+    var websocket = start_socket();
 
     // var websocket = new WebSocket("ws://chat.club.test/src/server.php");
 
